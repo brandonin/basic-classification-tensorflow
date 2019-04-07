@@ -1,0 +1,2 @@
+This is a basic classification of clothing types using fashion MNIST dataset.
+The tutorial can be found here: https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/keras/basic_classification.ipynb#scrollTo=qKF6uW-BCaW-

@@ -78,9 +78,23 @@ def plot_value_array(i, predictions_array, true_label):
     thisplot[true_label].set_color('blue')
 
 
-# Plot the first X test images, their predicted label, and the true label
-# Color correct predictions in blue, incorrect predictions in red
 # Grab an image from the test dataset
 img = test_images[0]
 
 print(img.shape)
+
+# Add the image to a batch where it's the only member.
+img = (np.expand_dims(img, 0))
+
+print(img.shape)
+
+predictions_single = model.predict(img)
+
+print(predictions_single)
+
+plot_value_array(0, predictions_single, test_labels)
+plt.xticks(range(10), class_names, rotation=45)
+plt.show()
+
+prediction_result = np.argmax(predictions_single[0])
+print(prediction_result)
